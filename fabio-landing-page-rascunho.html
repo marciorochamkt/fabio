@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title will be set by JavaScript -->
+    <title>Fabio Rocha - Elite Athletic Performance</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        // Custom Tailwind CSS Configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'anton': ['Anton', 'sans-serif'],
+                        'roboto': ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#111111',
+                        'brand-light': '#F5F5F5',
+                        'brand-accent': '#EAB308', // A gold/yellow accent for high contrast CTAs
+                        'brand-gray': '#A1A1AA',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Small CSS adjustments */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+        /* Style for the active language button */
+        .lang-btn.active {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark font-roboto text-brand-light">
+
+    <!-- Trainerize Link -->
+    <script>
+        const trainerizeLink = "http://trainerize.me/profile/frathletics/Fabio.Rocha/";
+    </script>
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="fixed top-4 right-4 z-50 flex items-center space-x-3">
+        <button id="lang-en" onclick="changeLanguage('en')" class="lang-btn p-2 rounded-full transition-all duration-300 opacity-70 hover:opacity-100 hover:scale-110">
+            <span class="text-2xl">🇺🇸</span>
+        </button>
+        <button id="lang-pt" onclick="changeLanguage('pt')" class="lang-btn p-2 rounded-full transition-all duration-300 opacity-70 hover:opacity-100 hover:scale-110">
+            <span class="text-2xl">🇧🇷</span>
+        </button>
+    </div>
+
+    <!-- HEADER / HERO SECTION -->
+    <header class="min-h-screen bg-brand-dark flex flex-col items-center justify-center text-center p-6 relative overflow-hidden">
+        <!-- Background image updated to a new source to prevent loading issues. -->
+        <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-20" style="background-image: url('https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg');"></div>
+        
+        <div class="relative z-10">
+            <h1 data-translate="hero_title" class="font-anton text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-shadow leading-tight">
+                Experience High-Performance Training
+            </h1>
+            <p data-translate="hero_subtitle" class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-brand-gray font-light">
+                With <span class="font-medium text-brand-light">Fabio Rocha</span>, specialist in transforming your physique and performance through a scientific and personalized methodology.
+            </p>
+            <div class="mt-10">
+                <a href="#" onclick="window.open(trainerizeLink, '_blank')" data-translate="hero_cta" class="bg-brand-accent text-brand-dark font-anton uppercase text-lg tracking-wider py-4 px-12 rounded-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-brand-accent/20">
+                    Start Your Transformation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 lg:py-32 bg-brand-light text-brand-dark">
+        <div class="container mx-auto max-w-5xl px-6 text-center">
+            <h2 data-translate="about_title" class="font-anton text-4xl lg:text-5xl uppercase tracking-tight leading-tight">The Mind Behind The Method</h2>
+            <div class="mt-8 max-w-3xl mx-auto space-y-6 text-lg text-zinc-700 font-light leading-relaxed">
+                <p data-translate="about_p1">
+                    My name is <span class="font-bold text-brand-dark">Fabio Rocha</span>, I am a Physical Education professional and a specialist in High-Performance Training. My mission is to help people achieve their goals, whether for aesthetics or performance.
+                </p>
+                <p data-translate="about_p2">
+                    Through customized programs tailored to your individual needs, we will work together to unlock your true potential and achieve extraordinary results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="py-20 lg:py-32 bg-brand-dark">
+        <div class="container mx-auto max-w-6xl px-6">
+            <div class="text-center mb-16">
+                <h2 data-translate="features_title" class="font-anton text-4xl lg:text-5xl uppercase tracking-tight leading-tight">My Specialties</h2>
+                <p data-translate="features_subtitle" class="mt-4 max-w-2xl mx-auto text-lg text-brand-gray font-light">This is how we will achieve your goals together.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Feature 1 -->
+                <div class="bg-zinc-900/50 p-8 rounded-lg border border-zinc-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-accent"><path d="M12 5C12 5 14 7 16 7C18 7 20 5 20 5"></path><path d="M12 12C12 12 14 14 16 14C18 14 20 12 20 12"></path><path d="M12 19C12 19 14 21 16 21C18 21 20 19 20 19"></path><path d="M4 5L20 5"></path><path d="M4 12L20 12"></path><path d="M4 19L20 19"></path></svg>
+                    </div>
+                    <h3 data-translate="feature1_title" class="font-anton text-2xl uppercase">Strength & Conditioning</h3>
+                    <p data-translate="feature1_desc" class="mt-2 text-brand-gray font-light">Develop raw strength and physical conditioning that translates into performance and a powerful physique.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-zinc-900/50 p-8 rounded-lg border border-zinc-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-accent"><path d="M12 2L12 22"></path><path d="M17 7L22 12L17 17"></path><path d="M7 7L2 12L7 17"></path></svg>
+                    </div>
+                    <h3 data-translate="feature2_title" class="font-anton text-2xl uppercase">Body Transformation</h3>
+                    <p data-translate="feature2_desc" class="mt-2 text-brand-gray font-light">Complete programs focused on fat loss and muscle mass gain, radically transforming your body.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-zinc-900/50 p-8 rounded-lg border border-zinc-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-accent"><path d="M5 12L19 12"></path><path d="M12 5L12 19"></path><path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z"></path></svg>
+                    </div>
+                    <h3 data-translate="feature3_title" class="font-anton text-2xl uppercase">Custom Online Programs</h3>
+                    <p data-translate="feature3_desc" class="mt-2 text-brand-gray font-light">Receive a 100% personalized plan with video tutorials and direct support through the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-20 lg:py-32 bg-brand-light text-brand-dark">
+        <div class="container mx-auto max-w-6xl px-6">
+            <div class="text-center mb-16">
+                <h2 data-translate="testimonials_title" class="font-anton text-4xl lg:text-5xl uppercase tracking-tight leading-tight">The Proof Is In The Performance</h2>
+                 <p data-translate="testimonials_subtitle" class="mt-4 max-w-2xl mx-auto text-lg text-zinc-600 font-light">See what athletes and clients who have had their results transformed have to say.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-brand-accent p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl flex flex-col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-black/20 mb-4"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 7 4 8 7 8z"></path><path d="M14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 7 4 8 7 8z"></path></svg>
+                    <p data-translate="testimonial1_text" class="text-zinc-900 font-light text-lg italic leading-relaxed flex-grow">"Fabio's expertise was crucial in my preparation for the Olympics. His attention to detail made a significant difference. He understands what it takes to compete at the highest level."</p>
+                    <p data-translate="testimonial1_author" class="mt-6 font-bold text-right text-brand-dark">- Etiene Medeiros, <span class="font-medium text-zinc-800">Olympic Swimmer</span></p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-brand-accent p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl flex flex-col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-black/20 mb-4"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 7 4 8 7 8z"></path><path d="M14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 7 4 8 7 8z"></path></svg>
+                    <p data-translate="testimonial2_text" class="text-zinc-900 font-light text-lg italic leading-relaxed flex-grow">"Fabio's approach completely changed my view on training. It's intense, it's smart, and the results are undeniable. My strength and physique have improved beyond what I imagined."</p>
+                    <p data-translate="testimonial2_author" class="mt-6 font-bold text-right text-brand-dark">- Marcos R., <span class="font-medium text-zinc-800">Professional Athlete</span></p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-brand-accent p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl flex flex-col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-black/20 mb-4"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 7 4 8 7 8z"></path><path d="M14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 7 4 8 7 8z"></path></svg>
+                    <p data-translate="testimonial3_text" class="text-zinc-900 font-light text-lg italic leading-relaxed flex-grow">"As someone who's tried countless programs, I was skeptical. Fabio's system is different. In a few months, I've lost fat, gained lean muscle, and my energy has skyrocketed. He's a game-changer."</p>
+                    <p data-translate="testimonial3_author" class="mt-6 font-bold text-right text-brand-dark">- Juliana P., <span class="font-medium text-zinc-800">Entrepreneur</span></p>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="bg-brand-accent p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl flex flex-col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-black/20 mb-4"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 7 4 8 7 8z"></path><path d="M14 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 7 4 8 7 8z"></path></svg>
+                    <p data-translate="testimonial4_text" class="text-zinc-900 font-light text-lg italic leading-relaxed flex-grow">"Working with Fabio was the best investment I've made in myself. The programming is next level. My performance has skyrocketed, and I feel stronger and more confident than ever."</p>
+                    <p data-translate="testimonial4_author" class="mt-6 font-bold text-right text-brand-dark">- Thiago M., <span class="font-medium text-zinc-800">Fitness Enthusiast</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section id="start" class="py-20 lg:py-32 bg-brand-dark">
+        <div class="container mx-auto max-w-4xl px-6 text-center">
+            <h2 data-translate="cta_title" class="font-anton text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-shadow leading-tight">Unleash Your Full Potential</h2>
+            <p data-translate="cta_subtitle" class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-brand-gray font-light">
+                Stop settling for average results. The system that creates champions is at your fingertips. Take the first step towards the strongest version of yourself.
+            </p>
+            <div class="mt-10">
+                <a href="#" onclick="window.open(trainerizeLink, '_blank')" data-translate="cta_button" class="bg-brand-accent text-brand-dark font-anton uppercase text-lg tracking-wider py-4 px-12 rounded-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-brand-accent/20">
+                    I Want Immediate Access
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center text-brand-gray">
+            <p data-translate="footer_copyright" class="font-light text-sm">© 2024 Fabio Rocha Performance. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" onclick="window.open(trainerizeLink, '_blank')" data-translate="footer_link" class="text-sm text-zinc-500 hover:text-brand-accent transition-colors">View Profile on Trainerize</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- TRANSLATION SCRIPT -->
+    <script>
+        const translations = {
+            en: {
+                page_title: "Fabio Rocha - Elite Athletic Performance",
+                hero_title: "Experience High-Performance Training",
+                hero_subtitle: 'With <span class="font-medium text-brand-light">Fabio Rocha</span>, specialist in transforming your physique and performance through a scientific and personalized methodology.',
+                hero_cta: "Start Your Transformation",
+                about_title: "The Mind Behind The Method",
+                about_p1: 'My name is <span class="font-bold text-brand-dark">Fabio Rocha</span>, I am a Physical Education professional and a specialist in High-Performance Training. My mission is to help people achieve their goals, whether for aesthetics or performance.',
+                about_p2: "Through customized programs tailored to your individual needs, we will work together to unlock your true potential and achieve extraordinary results.",
+                features_title: "My Specialties",
+                features_subtitle: "This is how we will achieve your goals together.",
+                feature1_title: "Strength & Conditioning",
+                feature1_desc: "Develop raw strength and physical conditioning that translates into performance and a powerful physique.",
+                feature2_title: "Body Transformation",
+                feature2_desc: "Complete programs focused on fat loss and muscle mass gain, radically transforming your body.",
+                feature3_title: "Custom Online Programs",
+                feature3_desc: "Receive a 100% personalized plan with video tutorials and direct support through the app.",
+                testimonials_title: "The Proof Is In The Performance",
+                testimonials_subtitle: "See what athletes and clients who have had their results transformed have to say.",
+                testimonial1_text: `"Fabio's expertise was crucial in my preparation for the Olympics. His attention to detail made a significant difference. He understands what it takes to compete at the highest level."`,
+                testimonial1_author: '- Etiene Medeiros, <span class="font-medium text-zinc-800">Olympic Swimmer</span>',
+                testimonial2_text: `"Fabio's approach completely changed my view on training. It's intense, it's smart, and the results are undeniable. My strength and physique have improved beyond what I imagined."`,
+                testimonial2_author: '- Marcos R., <span class="font-medium text-zinc-800">Professional Athlete</span>',
+                testimonial3_text: `"As someone who's tried countless programs, I was skeptical. Fabio's system is different. In a few months, I've lost fat, gained lean muscle, and my energy has skyrocketed. He's a game-changer."`,
+                testimonial3_author: '- Juliana P., <span class="font-medium text-zinc-800">Entrepreneur</span>',
+                testimonial4_text: `"Working with Fabio was the best investment I've made in myself. The programming is next level. My performance has skyrocketed, and I feel stronger and more confident than ever."`,
+                testimonial4_author: '- Thiago M., <span class="font-medium text-zinc-800">Fitness Enthusiast</span>',
+                cta_title: "Unleash Your Full Potential",
+                cta_subtitle: "Stop settling for average results. The system that creates champions is at your fingertips. Take the first step towards the strongest version of yourself.",
+                cta_button: "I Want Immediate Access",
+                footer_copyright: "© 2024 Fabio Rocha Performance. All rights reserved.",
+                footer_link: "View Profile on Trainerize"
+            },
+            pt: {
+                page_title: "Fabio Rocha - Performance Atlética de Elite",
+                hero_title: "Experimente o Treinamento de Alta Performance",
+                hero_subtitle: 'Com <span class="font-medium text-brand-light">Fabio Rocha</span>, especialista em transformar seu físico e sua performance através de uma metodologia científica e personalizada.',
+                hero_cta: "Comece Sua Transformação",
+                about_title: "A Mente por Trás do Método",
+                about_p1: 'Meu nome é <span class="font-bold text-brand-dark">Fabio Rocha</span>, sou profissional de Educação Física e especialista em Treinamento de Alta Performance. Minha missão é ajudar pessoas a alcançarem seus objetivos, seja por estética ou por performance.',
+                about_p2: "Através de programas customizados e elaborados para suas necessidades individuais, vamos juntos destravar seu verdadeiro potencial e conquistar resultados extraordinários.",
+                features_title: "Minhas Especialidades",
+                features_subtitle: "É assim que vamos atingir seus objetivos juntos.",
+                feature1_title: "Força e Condicionamento",
+                feature1_desc: "Desenvolva força bruta e um condicionamento físico que se traduz em performance e em um físico poderoso.",
+                feature2_title: "Transformação Corporal",
+                feature2_desc: "Programas completos com foco em perda de gordura e ganho de massa muscular, transformando seu corpo radicalmente.",
+                feature3_title: "Programas Online Customizados",
+                feature3_desc: "Receba um plano 100% personalizado com vídeos tutoriais e suporte direto pelo aplicativo.",
+                testimonials_title: "A Prova Está na Performance",
+                testimonials_subtitle: "Veja o que dizem atletas e clientes que tiveram seus resultados transformados.",
+                testimonial1_text: `"A expertise do Fabio foi crucial na minha preparação para as Olimpíadas. Sua atenção aos detalhes fez uma diferença significativa. Ele entende o que é preciso para competir no mais alto nível."`,
+                testimonial1_author: '- Etiene Medeiros, <span class="font-medium text-zinc-800">Nadadora Olímpica</span>',
+                testimonial2_text: `"A abordagem do Fabio mudou completamente minha visão sobre treino. É intenso, inteligente e os resultados são inegáveis. Minha força e físico melhoraram além do que eu imaginava."`,
+                testimonial2_author: '- Marcos R., <span class="font-medium text-zinc-800">Atleta Profissional</span>',
+                testimonial3_text: `"Como alguém que já tentou inúmeros programas, eu estava cético. O sistema do Fabio é diferente. Em poucos meses, perdi gordura, ganhei massa magra e minha energia disparou. Ele é um game-changer."`,
+                testimonial3_author: '- Juliana P., <span class="font-medium text-zinc-800">Empreendedora</span>',
+                testimonial4_text: `"Trabalhar com o Fabio foi o melhor investimento que fiz em mim. A programação é de outro nível. Minha performance decolou e me sinto mais forte e confiante do que nunca."`,
+                testimonial4_author: '- Thiago M., <span class="font-medium text-zinc-800">Entusiasta do Fitness</span>',
+                cta_title: "Liberte Seu Potencial Máximo",
+                cta_subtitle: "Pare de se contentar com resultados medianos. O sistema que cria campeões está ao seu alcance. Dê o primeiro passo em direção à sua versão mais forte.",
+                cta_button: "Quero Acesso Imediato",
+                footer_copyright: "© 2024 Fabio Rocha Performance. Todos os direitos reservados.",
+                footer_link: "Ver Perfil na Trainerize"
+            }
+        };
+
+        function setLanguage(lang) {
+            // Set page language attribute
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            
+            // Set page title
+            document.title = translations[lang].page_title;
+
+            // Update all elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update active button style
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
+        }
+
+        function changeLanguage(lang) {
+            localStorage.setItem('language', lang);
+            setLanguage(lang);
+        }
+
+        // On page load, check for saved language or default to English
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('language') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+
+</body>
+</html>
